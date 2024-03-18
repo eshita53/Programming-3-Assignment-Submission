@@ -24,8 +24,7 @@ def on_message(ws, message):
 def on_close(ws):
     print("Connection to WebSocket server closed")
 
-def run_websocket(): 
-    
+def run_websocket():
 # Create WebSocket connection
     ws = websocket.WebSocketApp(ws_url,
                             on_message=on_message,
@@ -34,7 +33,7 @@ def run_websocket():
 
 
 # Run WebSocket connection
-    ws.run_forever()  
+    ws.run_forever()
 
 wet = threading.Thread(target=run_websocket)
 wet.start()
